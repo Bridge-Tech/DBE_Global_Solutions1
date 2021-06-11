@@ -1,0 +1,14 @@
+package br.com.fiap.ultils;
+
+import javax.persistence.EntityManager;
+public class EntityManagerFacade {
+	private static final String PROGAMER_PERSISTENCE_UNIT = "progamer-persistence-unit";
+
+	public static EntityManager getEntityManager() {
+
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PROGAMER_PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		
+		return manager;
+	}
+}

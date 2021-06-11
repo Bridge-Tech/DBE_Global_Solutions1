@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+	 	<h:outputStylesheet name="style.css" library="css"/>
+	</h:head>
+
+<ui:composition template="_template.xhtml">
+
+	<ui:define name="content">
+		<div class="form-card">
+			<h:form id="form">
+				<p:dataView var="setup" rows="10" paginator="true"
+					rowsPerPageTemplate="5,10"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+					gridIcon="pi pi-th-large" listIcon="pi pi-bars">
+
+					<p:dataViewGridItem>
+						<div class="setup-grid-item card border-1">
+							<div class="setup-grid-item-top">
+								<div></div>
+
+							</div>
+							<div class="setup-grid-item-content">
+								<p:graphicImage name="images/setup/" library="demo" />
+								<div class="setup-name">
+									<h:outputText />
+								</div>
+								<div class="setup-description">#{setup.description}</div>
+								<p:rating value="0" />
+							</div>
+							<div class="setup-grid-item-bottom">
+								<h:outputText styleClass="setup-price">
+									<f:convertNumber currencySymbol="$" type="currency" />
+								</h:outputText>
+								<p:commandButton type="button" value="Details"
+									icon="pi pi-search">
+								</p:commandButton>
+							</div>
+						</div>
+					</p:dataViewGridItem>
+
+				</p:dataView>
+			</h:form>
+		</div>
+	</ui:define>
+
+</ui:composition>
+
+</html>

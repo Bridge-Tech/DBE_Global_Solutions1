@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color:#ddd;
+}
+#form{
+	
+	width:25rem;
+	margin:1rem auto;
+
+}
+.setup .setup-list-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+.setup .setup-list-item .setup-list-action {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.setup .setup-list-item .setup-list-detail {
+    flex: 1 1 0;
+    -ms-flex: 1 1 0;
+}
+
+.ui-inputgroup-addon {
+    padding: 0.5rem 0.5rem;
+    border-color: #ced4da;
+    background: #e9ecef;
+    color: #6c757d;
+    min-width: 2.357rem;
+}

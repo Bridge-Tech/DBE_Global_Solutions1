@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<h:outputStylesheet name="style.css" library="css" />
+	</h:head>
+	<body>
+
+	
+		<p:messages id="message">
+			<p:autoUpdate />
+		</p:messages>
+		<h:form>
+			<p:card class="form-card">
+
+				<f:facet name="title">
+				        Registro
+				</f:facet>
+				<div class="p-field p-grid">
+					<label for="name" class="p-col-fixed" style="width: 100px">Name</label>
+					<div class="p-col">
+						<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+						<p:inputText id="Name" value="#{userBean.user.name}">
+							<f:ajax event="blur" render="message" />
+						</p:inputText>
+					</div>
+				</div>
+
+				<div class="p-field p-grid">
+					<label for="email" class="p-col-fixed" style="width: 100px">Email</label>
+					<div class="p-col-12 p-md-4">
+		                <div class="ui-inputgroup">
+		                    <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+		                    <p:inputText placeholder="Email" value="#{userBean.user.email}"/>
+		                </div>
+		            </div>
+					
+				</div>
+				<div class="p-field p-grid">
+					<label for="passwoord" class="p-col-fixed" style="width: 100px">Senha</label>
+					<div class="p-col">
+						<p:password id="toggle" value="#{userBean.user.password}" toggleMask="true" redisplay="true" required="true" requiredMessage="O campo senha é obrigatorio"> <f:validateLength minimum="5" maximum="60"/> 
+							<f:ajax event="blur" render="message" />
+						</p:password>
+					</div>
+				</div>
+				<div class="p-field p-grid">
+					<label for="repeatpasswoord" class="p-col-fixed" style="width: 100px">Repetir Senha</label>
+					<div class="p-col">
+						<p:password id="toggle2" toggleMask="true" redisplay="true" required="true" requiredMessage="O campo senha é obrigatorio"> <f:validateLength minimum="5" maximum="60"/> 
+							<f:ajax event="blur" render="message" />
+						</p:password>
+					</div>
+				</div>
+				<div class="p-field p-grid">
+					<label for="birthDate" class="p-col-fixed" style="width: 100px">Nascimento</label>
+					<div class="p-field p-col-12 p-md-4">
+			            
+			            <p:inputMask id="date" value="#{userBean.user.birthDate}" mask="99/99/9999"/>
+			        </div>		
+				</div>
+				<div class="p-field p-grid">	
+				   	<label for="phone" class="p-col-fixed" style="width: 100px">Telefome Cel.</label>
+			        <div class="p-field p-col-12 p-md-4">
+			            <p:inputMask id="phone" value="#{userBean.user.phone}" mask="(99) 99999-9999" validateMask="true"/>
+			        </div>
+				</div>			
+			
+
+				<f:facet name="footer">
+					<p:commandButton icon="pi pi-check" value="Save"
+						action="#{userBean.save}"> 
+						<f:ajax execute="@form" render="message" />
+					</p:commandButton>
+					<p:commandButton icon="pi pi-times" value="Cancel"
+						styleClass="ui-button-secondary" style="margin-left: .5em" />
+				</f:facet>
+			</p:card>
+
+
+		</h:form>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+C:\Programacao\RepositorioEclipse\DBEGlobalSolution\.metadata\.plugins\org.eclipse.jdt.core
+514368703.index
+632882534.index
+3994684212.index
+2017234023.index
+631078484.index
+2930584096.index
+3398089153.index
+814442973.index

@@ -1,0 +1,14 @@
+package br.com.fiap.rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
+@Path("/user")
+public class SetupEndpoint {
+	
+	@GET
+	public void index() {
+		System.out.println("Chamado pela a API");
+	}
+
+}

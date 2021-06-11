@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Programacao\RepositorioEclipse\DBEGlobalSolution\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1501675100.index
+2327955973.index
+558273070.index
+329911360.index
+631078484.index
+2774738931.index
+3333932870.index
