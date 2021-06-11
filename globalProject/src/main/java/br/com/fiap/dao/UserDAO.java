@@ -48,4 +48,27 @@ public class UserDAO {
 	}
 
 
+	public boolean exist(User user) {
+		EntityManager manager = EntityManagerFacade.getEntityManager();
+		TypedQuery<User> query = manager.createQuery("Select u From User u WHERE "
+				+ "u.email = :email AND "
+				+ "u.password = :password",User.class);
+		query.setParameter("email", user.getEmail());
+		query.setParameter("password", user.getPassword());
+		
+		System.out.println("--->>>> User:"+user.getEmail()+"\n senha:"+ user.getPassword());
+		
+		try {
+			query.getSingleResult();
+		} catch (Exception e) {
+			return false;
+		}
+		
+		return true;
+		
+		
+		
+	}
+
+
 }

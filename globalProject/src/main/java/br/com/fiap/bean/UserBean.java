@@ -24,14 +24,12 @@ public class UserBean {
 	}
 	
 	public String login() {
-		return "index";
-	}
-	public String registerRedirect() {
-		System.out.println("Está aqui!");
-		return"register";
+		boolean exist = new UserDAO().exist(user);
+		System.out.println(exist);
+		if(exist) {return "index?faces-redirect=true";}
 		
+		return "login?faces-redirect=true";
 	}
-	
 	public User getUser() {
 		return user;
 	}

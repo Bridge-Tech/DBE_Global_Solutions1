@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:composition template="_template.xhtml">
+		<ui:define name="content">
+			<p:messages id="message">
+				<p:autoUpdate />
+			</p:messages>
+			<h:form>
+				<p:card class="form-card">
+	
+					<f:facet name="title">
+					        Cadastrar Hotel
+					</f:facet>
+					<div class="p-field p-grid">
+						<label for="name" class="p-col-fixed" style="width: 100px">Name Hotel</label>
+						<div class="p-col">
+						
+							<p:inputText id="Name" value="#{hotelBean.hotel.nameHotel}">
+								<f:ajax event="blur" render="message" />
+							</p:inputText>
+						</div>
+					</div>
+					<div class="p-field p-grid">
+						<label for="name" class="p-col-fixed" style="width: 100px">Endereço</label>
+						<div class="p-col">
+							<span class="ui-inputgroup-addon"><i class="pi pi-map-marker"></i></span>
+							<p:inputText id="Address" value="#{hotelBean.hotel.address}">
+								<f:ajax event="blur" render="message" />
+							</p:inputText>
+						</div>
+					</div>
+					<div class="p-field p-grid">
+						<label for="name" class="p-col-fixed" style="width: 100px">Avaliação</label>
+						<div class="p-col">
+							<span class="ui-inputgroup-addon"><i class="pi pi-star"></i></span>
+							<p:inputText id="assessment" placeholder="5 estrelas" value="#{hotelBean.hotel.assessment}">
+								<f:ajax event="blur" render="message" />
+							</p:inputText>
+						</div>
+					</div>
+					<div class="p-field p-grid">
+						<label for="name" class="p-col-fixed" style="width: 100px">Numero de Quartos</label>
+						<div class="p-col">
+							<p:inputText id="nuBedrooms" value="#{hotelBean.hotel.nuBedrooms}">
+								<f:ajax event="blur" render="message" />
+			                    	<f:validateRegex pattern="[\d\d+]"></f:validateRegex>
+							</p:inputText>
+						</div>
+					</div>					
+			
+					<div class="p-field p-grid">	
+					   	<label for="phone" class="p-col-fixed" style="width: 100px">Telefone Cel.</label>
+				        <div class="p-field p-col-12 p-md-4">
+				            <p:inputMask id="phone" value="#{hotelBean.hotel.phone}" mask="(99) 99999-9999" validateMask="true"/>
+				        </div>
+					</div>			
+				
+	
+					<f:facet name="footer">
+						<p:commandButton icon="pi pi-check" value="Save"
+							action="#{hotelBean.save}"> 
+							<f:ajax execute="@form" render="message" />
+						</p:commandButton>
+					</f:facet>
+				</p:card>
+	
+			</h:form>		
+		</ui:define>
+	
+	</ui:composition>
+	
+	
+</html>
