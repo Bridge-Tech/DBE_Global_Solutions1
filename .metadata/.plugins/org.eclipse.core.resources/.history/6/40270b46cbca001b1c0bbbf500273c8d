@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="_template.xhtml">
+
+	<ui:define name="content">
+		<p:dataTable id="TableHotel" value="#{userBean.allHotels}" var="user">
+			<p:column headerText="Name">
+				<h:outputText value="#{hotel.name}"></h:outputText>
+			</p:column>
+			<p:column headerText="Email">
+				<h:outputText value="#{hotel.email}"></h:outputText>
+			</p:column>
+			<p:column headerText="Password">
+				<h:outputText value="#{hotel.password}"></h:outputText>
+			</p:column>
+			<p:column headerText="Birth Date">
+				<h:outputText value="#{hotel.birthDate}"></h:outputText>
+			</p:column>
+			
+		</p:dataTable>
+		
+	</ui:define>
+
+</ui:composition>
+
+</html>

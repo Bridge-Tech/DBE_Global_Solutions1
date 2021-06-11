@@ -3,6 +3,7 @@
   <persistence-unit name="globalProject-persistence-unit" transaction-type="RESOURCE_LOCAL">
     <description>Forge Persistence Unit</description>
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.com.fiap.model.Hotel</class>
     <class>br.com.fiap.model.User</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>

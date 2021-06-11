@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -45,8 +46,27 @@ public class SetupEndpoint {
 	@Path("{id}")
 	public Response show(@PathParam("id") Long id) {
 		User user = dao.findById(id);
-		return Response.status(200).entity(user).build();
+		if( user == null ) {
+			return Response.status(404).build();
+		}
+		return Response.status(200).build();
 	}
 	
+	@PUT
+	@Path("{id}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response update(@PathParam("id") Long id, User user) {
+		User userf = dao.findById(id);
+		if( userf == null ) {
+			return Response.status(404).build();
+		}
+		user.setId(id);
+		try {
+			dao.update(user);
+		} catch (Exception e) {
+			return Response.status(500).build();
+		}
+		return Response.status(200).build();
+	}
 
 }

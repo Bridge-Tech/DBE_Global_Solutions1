@@ -439,3 +439,107 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.gef.GraphicalEditPart
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2021-06-11 02:05:30.354
 !MESSAGE Server Startup Succeeded
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2021-06-11 12:19:38.473
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildParameterTypes(ASTTools.java:189)
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildMethodSignature(ASTTools.java:179)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initializeMethods(SourceType.java:573)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initialize(SourceType.java:132)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.newInstance(SourceType.java:113)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.buildType(SourceType.java:400)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.syncTypes(SourceType.java:390)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.synchronizeWith(SourceType.java:151)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.syncPrimaryType(SourceTypeCompilationUnit.java:131)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.synchronizeWith(SourceTypeCompilationUnit.java:71)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceCompilationUnit.synchronizeWithJavaSource(SourceCompilationUnit.java:157)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaCompilationUnitDelta(AbstractJpaProject.java:1391)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1227)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaElementChanged(AbstractJpaProject.java:1200)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged_(InternalJpaProjectManager.java:897)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaChangeEventHandlerCommand.execute(InternalJpaProjectManager.java:880)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2021-06-11 12:19:46.487
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildParameterTypes(ASTTools.java:189)
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildMethodSignature(ASTTools.java:179)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initializeMethods(SourceType.java:573)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initialize(SourceType.java:132)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.newInstance(SourceType.java:113)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.buildType(SourceType.java:400)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.syncTypes(SourceType.java:390)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.synchronizeWith(SourceType.java:151)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.syncPrimaryType(SourceTypeCompilationUnit.java:131)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.synchronizeWith(SourceTypeCompilationUnit.java:71)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceCompilationUnit.synchronizeWithJavaSource(SourceCompilationUnit.java:157)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaCompilationUnitDelta(AbstractJpaProject.java:1391)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1227)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaElementChanged(AbstractJpaProject.java:1200)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged_(InternalJpaProjectManager.java:897)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaChangeEventHandlerCommand.execute(InternalJpaProjectManager.java:880)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2021-06-11 12:19:48.997
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildParameterTypes(ASTTools.java:189)
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildMethodSignature(ASTTools.java:179)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initializeMethods(SourceType.java:573)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initialize(SourceType.java:132)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.newInstance(SourceType.java:113)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.buildType(SourceType.java:400)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.syncTypes(SourceType.java:390)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.synchronizeWith(SourceType.java:151)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.syncPrimaryType(SourceTypeCompilationUnit.java:131)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.synchronizeWith(SourceTypeCompilationUnit.java:71)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceCompilationUnit.synchronizeWithJavaSource(SourceCompilationUnit.java:157)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaCompilationUnitDelta(AbstractJpaProject.java:1391)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1227)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaElementChanged(AbstractJpaProject.java:1200)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged_(InternalJpaProjectManager.java:897)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaChangeEventHandlerCommand.execute(InternalJpaProjectManager.java:880)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jpt.jpa.core 4 0 2021-06-11 12:19:50.513
+!MESSAGE Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.jdt.core.dom.ITypeBinding.getQualifiedName()" because "type" is null
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildParameterTypes(ASTTools.java:189)
+	at org.eclipse.jpt.common.core.internal.utility.jdt.ASTTools.buildMethodSignature(ASTTools.java:179)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initializeMethods(SourceType.java:573)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.initialize(SourceType.java:132)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.newInstance(SourceType.java:113)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.buildType(SourceType.java:400)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.syncTypes(SourceType.java:390)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceType.synchronizeWith(SourceType.java:151)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.syncPrimaryType(SourceTypeCompilationUnit.java:131)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceTypeCompilationUnit.synchronizeWith(SourceTypeCompilationUnit.java:71)
+	at org.eclipse.jpt.common.core.internal.resource.java.source.SourceCompilationUnit.synchronizeWithJavaSource(SourceCompilationUnit.java:157)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaCompilationUnitDelta(AbstractJpaProject.java:1391)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.processJavaDelta(AbstractJpaProject.java:1227)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaElementChanged(AbstractJpaProject.java:1200)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged_(InternalJpaProjectManager.java:897)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaChangeEventHandlerCommand.execute(InternalJpaProjectManager.java:880)
+	at org.eclipse.jpt.common.core.internal.utility.command.JobCommandJob.run(JobCommandJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2021-06-11 12:56:35.988
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2021-06-11 12:56:36.643
+!MESSAGE Server processes have terminated prematurely. Please check your server logs for more details. 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2021-06-11 12:56:38.754
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2021-06-11 12:57:16.630
+!MESSAGE Server Startup Succeeded

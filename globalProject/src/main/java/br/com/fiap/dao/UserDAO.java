@@ -36,4 +36,16 @@ public class UserDAO {
 	}
 
 
+	public void update(User user) {
+		EntityManager manager = EntityManagerFacade.getEntityManager();
+		manager.getTransaction().begin();
+		manager.merge(user);
+		manager.flush();
+		manager.getTransaction().commit();
+		
+		manager.close();
+		
+	}
+
+
 }
