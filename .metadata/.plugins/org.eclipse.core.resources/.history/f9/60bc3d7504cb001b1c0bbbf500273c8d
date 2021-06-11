@@ -1,0 +1,27 @@
+package br.com.fiap.ultils;
+
+import javax.faces.event.PhaseEvent;
+import javax.faces.event.PhaseId;
+import javax.faces.event.PhaseListener;
+
+public class AuthorizationListener implements PhaseListener{
+
+	@Override
+	public void afterPhase(PhaseEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void beforePhase(PhaseEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PhaseId getPhaseId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

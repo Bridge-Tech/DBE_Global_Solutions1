@@ -47,17 +47,23 @@
 	
 	
 					<f:facet name="footer">
-						<p:commandButton icon="pi pi-check" value="Save"
+						<p:commandButton icon="pi pi-check" value="login"
 							action="#{userBean.login}"> 
 							
 						</p:commandButton>
-						<p:commandButton icon="pi pi-user" value="Register"
-							styleClass="ui-button-secondary" action="#{userBean.registerRedirect}" style="margin-left: .5em" />
 					</f:facet>
 				</p:card>
 	
 	
-			</h:form>			
+			</h:form>
+			<p:card class="form-card">
+				<h:form>
+		    		<h:commandLink action="#{userBean.redirectRegister}">
+		    			Register
+		    		</h:commandLink>
+		    	</h:form>	
+			</p:card>
+	    		
 		</ui:define>
 	
 	</ui:composition>

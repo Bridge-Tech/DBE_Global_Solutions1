@@ -1,0 +1,29 @@
+package br.com.fiap.ultils;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.PhaseEvent;
+import javax.faces.event.PhaseId;
+import javax.faces.event.PhaseListener;
+
+public class AuthorizationListener implements PhaseListener{
+
+
+	private static final long serialVersionUID = -1397794690105048706L;
+
+	@Override
+	public void afterPhase(PhaseEvent event) {
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+		
+	}
+
+	@Override
+	public void beforePhase(PhaseEvent event) {
+	
+	}
+
+	@Override
+	public PhaseId getPhaseId() {
+		return PhaseId.ANY_PHASE;
+	}
+	
+}

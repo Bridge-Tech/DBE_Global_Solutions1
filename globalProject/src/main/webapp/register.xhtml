@@ -22,7 +22,7 @@
 						<label for="name" class="p-col-fixed" style="width: 100px">Name</label>
 						<div class="p-col">
 							<span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-							<p:inputText id="Name" value="#{userBean.user.name}">
+							<p:inputText id="Name" value="#{userBean.user.name}" required="true" requiredMessage="O campo nome é obrigatorio">
 								<f:ajax event="blur" render="message" />
 							</p:inputText>
 						</div>
@@ -33,7 +33,12 @@
 						<div class="p-col-12 p-md-4">
 			                <div class="ui-inputgroup">
 			                    <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-			                    <p:inputText placeholder="Email" value="#{userBean.user.email}"/>
+			                    <p:inputText placeholder="Email" value="#{userBean.user.email}"	required ="true" 
+			                    	requiredMessage="O campo de email é obrigatório" 
+			                    	validatorMessage="Email inválido">
+			                    	<f:ajax event="blur" render="message" />
+			                    	<f:validateRegex pattern="^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$"></f:validateRegex>
+			                    </p:inputText>
 			                </div>
 			            </div>
 						
@@ -49,7 +54,7 @@
 					<div class="p-field p-grid">
 						<label for="repeatpasswoord" class="p-col-fixed" style="width: 100px">Repetir Senha</label>
 						<div class="p-col">
-							<p:password id="toggle2" toggleMask="true" redisplay="true" required="true" requiredMessage="O campo senha é obrigatorio"> <f:validateLength minimum="5" maximum="60"/> 
+							<p:password id="toggle2" toggleMask="true" redisplay="true" required="true" requiredMessage="O campo repetir senha é obrigatorio"> <f:validateLength minimum="5" maximum="60"/> 
 								<f:ajax event="blur" render="message" />
 							</p:password>
 						</div>
@@ -74,8 +79,6 @@
 							action="#{userBean.save}"> 
 							<f:ajax execute="@form" render="message" />
 						</p:commandButton>
-						<p:commandButton icon="pi pi-times" value="Cancel"
-							styleClass="ui-button-secondary" style="margin-left: .5em" />
 					</f:facet>
 				</p:card>
 	
